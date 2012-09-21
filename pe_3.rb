@@ -1,9 +1,7 @@
 # Find the largest Prime Factor of a given number
-
-# what is a prime factor ?
-
 # The prime factors of 13195 are 5, 7, 13 and 29.
-# Rules for prime factor ?
+
+# Using the square root rule to check for primality.
 
 require 'mathn'
 
@@ -36,14 +34,7 @@ largest_prime_factor(600851475143)
 # largest_prime_factor(13195)
 # largest_prime_factor(144)
 
-# can I not use for on range from high to low ?!
-# Ranges dont work from high to low ?!
-
+# Ruby Ranges do not work from high to low 
 # How can we use for loops in ruby ?
 
-# Every program has entry condition, exit condition, iteration
-# Brute Force Methods ?
-
-# How to find if a number is prime number ? Slow methods(brute-force or trial & error methods. Faster Algorithms - Here is where algorithms come into place.)
-
-# Use flags
+# Entry Condition, Exit Condition, Increment, Break, Flag

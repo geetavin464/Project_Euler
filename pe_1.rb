@@ -12,15 +12,11 @@ end
 
 sum_multiples(3,5,1000)
 
-# for is better than while, because you dont have to increment your iterator.
-
-# Whats the catch in this program ?
-# Common multiples of 3 & 5
-# Even if there are common multiples, we take them only once. There is no CATCH !!
+# for loop works well with ranges in ruby
 
 # Extend the program so it takes any number of arguments for n1,n2
 # Use *params
-# Here comes the CATCH. I've to eliminate common arguments
+# Here comes the CATCH. I've to eliminate multiples common to 3 & 5
 
 def sum_multiples(limit, *params)
    sum = 0
@@ -39,6 +35,6 @@ end
 
 sum_multiples(1000,3,5)
 
-# *params - Reference to the arguments ?
+# *params 
 # To capture variable number of arguments or multiple arguments in a single paramter
 # Place it after the normal parameter

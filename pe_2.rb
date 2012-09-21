@@ -16,8 +16,7 @@ end
 
 sum_even_fib(4000000)
 
-# for loop is good, when you've to execute code on every increment. Coz it does auto-increment for us
-# while is good, if you execute on specific numbers, not every increment
+# for loop in ruby does auto-increment 
+# while needs manual incrementing
 
-# Be careful with the logic. 
 
