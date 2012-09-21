@@ -30,7 +30,7 @@ def largest_prime_factor(num)
    largest_prime
 end
 
-largest_prime_factor(600851475143)
+largest_prime_factor(600851475143)   # Very Slow. Optimize It.
 # largest_prime_factor(13195)
 # largest_prime_factor(144)
 
