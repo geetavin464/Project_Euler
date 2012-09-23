@@ -33,16 +33,22 @@ end
 def largest_pal_prod_3_digit_nums
    i = 999
    j = 999
-   prod = 0
+   prod = 1
    is_pal = false
    while(i > 99 and !is_pal)
-       while(j > 99)
+       while(j > 99 and !is_pal)
          prod = i*j
          is_pal = is_palindrome(get_digits(prod))
+         puts "value of prod is "
+         print prod
+         puts "value of is_pal is"
+         print is_pal
          j = j-1  
        end
+      j = 999
        i = i-1
    end 
+
     return prod
 end
 
@@ -52,3 +58,6 @@ largest_pal_prod_3_digit_nums
 # Are you calling the main fn
 # Are the variable names right ?
 # When you are finding the largest, start from the higher end
+
+# Variable Scope in Ruby Blocks
+# Nested while loops are tricky ! Re-initialize the inner iterator 
