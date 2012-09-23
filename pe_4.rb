@@ -53,7 +53,7 @@ largest_pal_prod_3_digit_nums
 # Check your assumptions. May not always be true
 # Are you calling the main fn
 # Are the variable names right ?
-# When you are finding the largest, start from the higher end
+# When you are finding the largest, start from the higher end ( Wrong assumption !)
 
 # Variable Scope in Ruby Blocks
 # Nested while loops are tricky ! Re-initialize the inner iterator 
