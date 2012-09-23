@@ -33,23 +33,19 @@ end
 def largest_pal_prod_3_digit_nums
    i = 999
    j = 999
-   prod = 1
+   prod = largest_pal = 1
    is_pal = false
-   while(i > 99 and !is_pal)
-       while(j > 99 and !is_pal)
+   while(i > 99)
+       while(j > 99)
          prod = i*j
          is_pal = is_palindrome(get_digits(prod))
-         puts "value of prod is "
-         print prod
-         puts "value of is_pal is"
-         print is_pal
+         largest_pal = prod if( is_pal and prod > largest_pal)
          j = j-1  
        end
       j = 999
        i = i-1
    end 
-
-    return prod
+   largest_pal
 end
 
 largest_pal_prod_3_digit_nums
@@ -61,3 +57,4 @@ largest_pal_prod_3_digit_nums
 
 # Variable Scope in Ruby Blocks
 # Nested while loops are tricky ! Re-initialize the inner iterator 
+# Made wrong assumptions ! Practice visualizing the loops (assumed first encounter of pal is the largest, which is wrong)
