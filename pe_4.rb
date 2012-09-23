@@ -9,14 +9,11 @@ def get_digits(num)
    # store all the digits in an array
    digits = []
    result = num  
+   first_iter_flag = true
         while(result != 0)
-            if( (0..9).include?(result))
-                digits.push result
-                result = 0
-            else
-                result = result/10
-                digits.unshift result%10 if(result != 0)
-            end
+            result = result/10 if(!first_iter_flag)
+            first_iter_flag = false if(first_iter_flag)
+            digits.unshift result%10 if(result != 0)
         end
     digits
 end
