@@ -2,11 +2,6 @@
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
 def get_digits(num)
-   #  how to extract the unit's digit of a number
-   # Is there a ruby method to do this ?
-   # How to extract the 9 from 129
-   # reduce it to a decimal & round it ?
-   # store all the digits in an array
    digits = []
    result = num  
    first_iter_flag = true
@@ -18,6 +13,42 @@ def get_digits(num)
     digits
 end
 
-get_digits(937)
+# get_digits(937)
 
-# Is everything changing for each iteration of the loop. (everything that needs to change)
+def is_palindrome(arr)
+    length = arr.length
+    is_pal = true
+    for i in 0..length/2      
+       if !(arr[i] == arr[length-i-1])
+           is_pal = false
+       end
+    end
+    is_pal
+end
+
+# is_palindrome([1,2,2,1])
+# is_palindrome([1,2,3,2,1])
+
+
+def largest_pal_prod_3_digit_nums
+   i = 999
+   j = 999
+   prod = 0
+   is_pal = false
+   while(i > 99 and !is_pal)
+       while(j > 99)
+         prod = i*j
+         is_pal = is_palindrome(get_digits(prod))
+         j = j-1  
+       end
+       i = i-1
+   end 
+    return prod
+end
+
+largest_pal_prod_3_digit_nums
+
+# Check your assumptions. May not always be true
+# Are you calling the main fn
+# Are the variable names right ?
+# When you are finding the largest, start from the higher end
