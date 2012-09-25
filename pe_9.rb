@@ -1,3 +1,4 @@
+# PE#9
 # Find the product abc, where a^2 + b^2 = c^2
 # a+b+c=1000
 # Find abc
