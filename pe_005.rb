@@ -22,3 +22,5 @@ def smallest_divisible_num
 end
 
 smallest_divisible_num
+
+# If you see a nested loop, its time to separate it into a method

@@ -4,29 +4,33 @@
 
 # Using the square root rule to check for primality.
 
-require 'mathn'
+def is_prime(n)
+flag_prime = false
+    if(n == 2)
+        return true
+    else
+        n_sqrt = Math.sqrt(n).round
+          for i in 2..n_sqrt
+             break if(n%i == 0)
+             flag_prime = true if( (i==n_sqrt) and n%i != 0 ) 
+          end
+    end
+    flag_prime
+end
 
 def largest_prime_factor(num)
-   largest_prime = num
+   largest_prime = 1
+   found = false
    n = num
    while(n > 0)
-       # check if n is a factor of num
       if(num%n == 0)
-          
-          flag_prime = false
-          # check for primality of n
-          n_limit = Math.sqrt(n)
-          for i in 2..n_limit
-             break if(n%i == 0)
-             flag_prime = true if( (i==n_limit or i==n_limit.ceil-1) and n%i != 0 ) 
+          if(is_prime(n))
+              largest_prime = n if(is_prime(n))
+              found = true
           end
-          largest_prime = n if(flag_prime)
-          
       end
       n = n - 1
-      
-      # Break on 1st encounter of a prime 
-      break if(largest_prime < num)
+      break if(found)
    end
    largest_prime
 end
