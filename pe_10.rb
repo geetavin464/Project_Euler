@@ -5,12 +5,16 @@
 
 def is_prime(n)
 flag_prime = false
-n_limit = Math.sqrt(n)
-  for i in 2..n_limit
-     break if(n%i == 0)
-     flag_prime = true if( (i==n_limit or i==n_limit.ceil-1) and n%i != 0 ) 
-  end
-flag_prime
+    if(n == 2)
+        return true
+    else
+        n_sqrt = Math.sqrt(n).round
+          for i in 2..n_sqrt
+             break if(n%i == 0)
+             flag_prime = true if( (i==n_sqrt) and n%i != 0 ) 
+          end
+    end
+    flag_prime
 end
 
 
