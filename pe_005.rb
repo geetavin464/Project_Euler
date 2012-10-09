@@ -3,24 +3,36 @@
 
 #What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
+def is_divisible(num)
+    is_div_flag = true
+    while(is_div_flag == true)
+        i = 20
+        while(i > 1)
+            if(num%i != 0 )
+                is_div_flag = false
+            end
+            break if(is_div_flag == false)
+            i=i-1
+        end
+    end
+    return is_div_flag
+end
 
 def smallest_divisible_num
-    divisible_flag = false
-    small_divisible_num = 21
-    num = 21
-    while(!divisible_flag)
-        divisible_flag = true
-        for i in 1..20
-           if !(num%i == 0)
-               divisible_flag = false
-           end 
-        end     
-        small_divisible_num = num if divisible_flag
-        num = num+1
+    num = 20
+    found = false
+    while(found == false) 
+        if(is_divisible(num))
+            found = true 
+            smallest_div_num = num
+        end
+        puts "\nCurrent num is"
+        print num
+        num+=20    
     end
-    small_divisible_num
+
+    smallest_div_num
 end
 
 smallest_divisible_num
 
-# If you see a nested loop, its time to separate it into a method
