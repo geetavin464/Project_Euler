@@ -4,7 +4,7 @@
 def sum_of_squares(n)
    sum = 0
    for i in 1..n
-       sum = sum + i*i
+       sum+= i*i
    end 
    sum
 end
@@ -12,7 +12,7 @@ end
 def square_of_sum(n)
     sum = 0
     for i in 1..n
-       sum = sum + i 
+       sum+= i 
     end
     sum = sum*sum
 end
