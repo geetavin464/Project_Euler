@@ -14,16 +14,16 @@
 
 
 def sum_of_diagnols(side)
-    sum=1
-    n=1
-    num=1
+    sum=n=num=1
+    
     while(num < side*side)
         4.times do 
-            num = num+2*n
-            sum =  sum+num       
+            num+= 2*n
+            sum+= num       
         end
-        n=n+1
+        n+= 1
     end
+    
     sum
 end
 

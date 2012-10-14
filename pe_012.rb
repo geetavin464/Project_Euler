@@ -19,34 +19,26 @@
 
 def has_over_500_divisors(num)
     count = 0
-    found_flag = false
       if(num > 500 )
     	  for i in 1..num
     	     count+= 1 if(num%i == 0)
-    	     found_flag = true if(count > 500)
-    	     break if found_flag
+    	     return true if(count > 500)
           end
       end
-  puts "\nThe value of count is"
-  print count
-  return found_flag
+  return false
 end
 
 
-def triangle_num(tp,n)
-    
+def triangle_num(tp,n)  
     return tp+n
-    
 end
 
 
 def triangle_num_with_more_than_500_divs
-   tp = 7183945
-   i=3791
+   tp = 1
+   i=1
    loop do
       tp = triangle_num(tp,i)
-      puts "\n Value of tp is"
-      print tp
       return tp if has_over_500_divisors(tp)
       i+=1 
    end 

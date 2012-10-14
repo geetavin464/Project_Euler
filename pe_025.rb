@@ -47,16 +47,11 @@ def fibonacci(n)
 end
 
 def fib_with_m_digits(m)
-    found = false
     n = 1
-    while(found == false) do
-        if get_num_of_digits(fibonacci(n)) == m.to_i
-            fib = n
-            found = true
-        end
+    loop do
+        return n if get_num_of_digits(fibonacci(n)) == m.to_i
         n+=1
     end
-    fib
 end
 
 fib_with_m_digits(1000)
