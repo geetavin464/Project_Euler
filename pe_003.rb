@@ -5,16 +5,13 @@
 # Using the square root rule to check for primality.
 
 def is_prime(n)
-    if(n == 2)
-        return true
-    else
+    if(n != 2)
         n_sqrt = Math.sqrt(n).round
           for i in 2..n_sqrt
-             break if(n%i == 0)
-             return true if( (i==n_sqrt) and n%i != 0 ) 
+              return false if(n%i==0)
           end
     end
-    return false
+    return true
 end
 
 def largest_prime_factor(num)

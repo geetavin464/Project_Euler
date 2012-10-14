@@ -3,35 +3,25 @@
 
 # Finding the nth prime number ?!
 
-
 def is_prime(n)
-flag_prime = false
-    if(n == 2)
-        return true
-    else
+    if(n != 2)
         n_sqrt = Math.sqrt(n).round
           for i in 2..n_sqrt
-             break if(n%i == 0)
-             flag_prime = true if( (i==n_sqrt) and n%i != 0 ) 
+              return false if(n%i==0)
           end
     end
-    flag_prime
+    return true
 end
 
 
 def nth_prime(n)
-   found = false
-   i = 2
-   count = 0
-   while(found == false)
-       count+=1 if is_prime(i)
-       if(count == 10001)
-          found = true
-       else
-          i+=1     
-       end
+   i = 2       #First Prime Number        
+   count = 0   # Track 'n'th prime number
+   loop do
+     count+=1 if is_prime(i)   
+     return i if(count == 10001)
+     i+=1     
    end
-   return i  
 end
 
 nth_prime(10001)
