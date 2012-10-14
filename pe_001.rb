@@ -4,9 +4,7 @@
 def sum_multiples(n1,n2,limit)
    sum = 0
    for i in 1...limit
-       if(i%n1 == 0 or i%n2 == 0)
-          sum = sum + i
-       end
+      sum+= i if(i%n1 == 0 or i%n2 == 0)
    end   
    sum
 end
@@ -23,12 +21,12 @@ def sum_multiples(limit, *params)
    sum = 0
    for i in 1...limit
        params.each do |p|
-           success = false
+           is_multiple = false
            if(i%p == 0)
-              success = true
+              is_multiple = true
               sum = sum + i
            end
-           break if success == true
+           break if is_multiple == true
        end
    end   
    sum
