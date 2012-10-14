@@ -17,14 +17,11 @@ end
 # get_digits(937)
 
 def is_palindrome(arr)
-    length = arr.length
-    is_pal = true
-    for i in 0..length/2      
-       if !(arr[i] == arr[length-i-1])
-           is_pal = false
-       end
+    l = arr.length
+    for i in 0..l/2      
+       return false if !(arr[i] == arr[l-i-1])
     end
-    is_pal
+    return true
 end
 
 # is_palindrome([1,2,2,1])
@@ -34,8 +31,7 @@ end
 def largest_pal_prod_3_digit_nums
    i = 999
    j = 999
-   prod = largest_pal = 1
-   is_pal = false
+   largest_pal = 1
    while(i > 99)
        while(j > 99)
          prod = i*j
