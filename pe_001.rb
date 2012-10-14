@@ -37,3 +37,8 @@ sum_multiples(1000,3,5)
 # *params 
 # To capture variable number of arguments or multiple arguments in a single paramter
 # Place it after the normal parameter
+
+
+# Return vs Break
+# Return - returns to the method call
+# Break - comes out of the current iteration of the loop

@@ -5,12 +5,10 @@ def sum_even_fib(upper_limit)
    sum = fib0 = 0
    fib = 1
    while (fib < upper_limit)
-       if(fib%2 == 0)
-           sum = sum + fib
-       end
+       sum+= fib if(fib%2 == 0)
        temp = fib0
        fib0 = fib
-       fib = fib + temp
+       fib+= temp
    end 
    sum
 end
