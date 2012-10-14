@@ -9,21 +9,13 @@
 
 def product_of_pyth_triplet
 
-found = false
-
-        for a in 1...1000
-            break if found == true
-            for b in 1...1000
-                break if found == true
-                c = 1000 - a - b
-                if(a*a + b*b == c*c)
-                    prod = a*b*c
-                    found = true
-                end
-            end
+    for a in 1...1000
+        for b in 1...1000
+            c = 1000 - a - b
+            return a*b*c if(a*a + b*b == c*c)
         end
-
-prod
+    end
+    
 end    
 
 product_of_pyth_triplet
