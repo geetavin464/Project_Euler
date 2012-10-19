@@ -24,33 +24,22 @@
 # 71636269561882670428252483600823257530420752963450
 
 
-def greatest_product(file_name)
-    prod = 1
-    file = File.open(file_name, "r")
-    
-    while(!line.chomp.empty?)
-        line = file.gets
-        l = line.length
-        for i in 
-    end
-    
-    
+def greatest_prod(file_name)
+    f1 = File.open(file_name)
+    greatest_prod = prod = 1
+      while(!f1.eof)
+         line = f1.readline.chomp
+         l = line.length
+         for i in 0..l-6
+             prod = 1
+             5.times do
+                prod = prod*line[i].chr.to_i
+                i+=1 
+             end
+             greatest_prod = prod if(greatest_prod < prod)
+         end
+       end
+  greatest_prod  
 end
 
-greatest_product("pe_008.txt")
-
-
-def greatest_product(*arr)
-
-    l = arr.length
-    prod = 1
-    for i in 0..l-3
-       curr_prod = arr[i]*arr[i+1]*arr[i+2]
-       prod = curr_prod if(curr_prod > prod)
-    end
-    prod
-    
-end
-
-greatest_product(2,3,4,5,6,7,8,9)
-
+greatest_prod("pe_008.txt")
