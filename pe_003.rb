@@ -21,10 +21,8 @@ def largest_prime_factor(num)
         return num
     else
         i=2
-        found = false
-       while(!found)
-            found = true if(is_prime(i) and num%i==0)
-            return largest_prime_factor(num/i) if(found)
+       loop do 
+            return largest_prime_factor(num/i) if(is_prime(i) and num%i==0)
             i+=1
        end
     end
