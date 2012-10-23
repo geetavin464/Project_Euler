@@ -29,6 +29,6 @@ def largest_prime_factor(num)
     
 end
 
-largest_prime_factor(600851475143)   # Very Slow. Optimize It.
+largest_prime_factor(600851475143)   
 
-# Why is the return statement no printing value ?!
+# The call to the recursive should return 
