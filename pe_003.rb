@@ -18,15 +18,13 @@ end
 def largest_prime_factor(num)
     
     if(is_prime(num))
-        puts "\n Value of num is\n"
-        print num
         return num
     else
         i=2
         found = false
        while(!found)
             found = true if(is_prime(i) and num%i==0)
-            largest_prime_factor(num/i) if(found)
+            return largest_prime_factor(num/i) if(found)
             i+=1
        end
     end
