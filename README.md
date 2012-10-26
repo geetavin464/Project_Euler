@@ -1,9 +1,9 @@
-project_euler
+Project_Euler
 =============
 
-Solving project_euler in Ruby
+http://projecteuler.net
 
-http://projecteuler.net/problems
+Very Interesting Mathematical/Programming Problems. Hope to solve them all one day !
 
 Completed ( 16 out of 397 )
 
