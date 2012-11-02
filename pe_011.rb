@@ -68,4 +68,4 @@ def greatest_prod(file_name)
     prod_v = vert_prod(arr)
 end
 
-greatest_prod('pe_011.txt')
+greatest_prod('Data_Files/pe_011.txt')

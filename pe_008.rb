@@ -42,4 +42,4 @@ def greatest_prod(file_name)
   greatest_prod  
 end
 
-greatest_prod("pe_008.txt")
+greatest_prod("Data_Files/pe_008.txt")

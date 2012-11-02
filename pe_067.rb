@@ -48,4 +48,4 @@ def max_sum_route(file_name)
     max_sum_arr[h-1].max
 end
 
-max_sum_route('pe_067.txt')
+max_sum_route('Data_Files/pe_067.txt')

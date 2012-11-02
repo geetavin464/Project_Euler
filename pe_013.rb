@@ -19,7 +19,7 @@ def first_ten_digits(file_name)
    num
 end
 
-first_ten_digits('pe_013.txt')
+first_ten_digits('Data_Files/pe_013.txt')
 
 
 
