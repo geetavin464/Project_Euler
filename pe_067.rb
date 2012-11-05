@@ -22,7 +22,7 @@ def read(file_name)
    arr
 end
 
-
+# Store the max sum for a cell ( in the route ending in that cell) as an intermediate DS
 def max_sum_route(file_name)
     arr = read(file_name)    
     h = arr.length
