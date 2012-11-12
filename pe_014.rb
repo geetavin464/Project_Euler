@@ -13,8 +13,9 @@
 # 
 # NOTE: Once the chain starts the terms are allowed to go above one million.
 
-require 'memoize'
-include Memoize
+
+
+# Iterative Method
 
 def length_of_sequence(n)
    length = 1
@@ -29,15 +30,34 @@ def length_of_sequence(n)
     length
 end
 
-# length_of_sequence(13)
+# Recursive Method Using Memoization
+require 'rubygems'
+require 'memoize'
+include Memoize
+
+a = Time.now
+
+def length_of_sequence(n)
+    return 1 if(n==1)
+    next_term = n.even? ? n/2 : 3*n+1
+    return length_of_sequence(next_term) + 1
+end
 
 def longest_sequence(limit)
-    longest = curr= 0
-    for i in 1...limit
-        curr = length_of_sequence(i)
-        longest = curr if(curr > longest)
+    longest_seq = 1
+    longest_num = 1
+    curr = 1
+    memoize(:length_of_sequence)
+    for i in 1..limit
+        curr_length = length_of_sequence(i)
+        if(curr_length > longest_seq)
+            longest_seq = curr_length 
+            longest_num = i
+        end
     end
-    longest
+    longest_num
 end
 
 longest_sequence(1000000)
+b = Time.now
+puts " The script took #{b-a} seconds"
