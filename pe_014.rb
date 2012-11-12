@@ -13,6 +13,8 @@
 # 
 # NOTE: Once the chain starts the terms are allowed to go above one million.
 
+require 'memoize'
+include Memoize
 
 def length_of_sequence(n)
    length = 1
